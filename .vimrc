@@ -1,9 +1,20 @@
+"color scheme 
+set t_Co=256   "这一步很关键决定了你配色结果是不是很漂亮
+"color molokai
+"highlighe function name
+"autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
+"autocmd BufNewFile,BufRead * :syntax match cfunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
+
+"hi CTagsGlobalVariable ctermfg=5 " 修改全局变量 红色
+"hi CTagsMember ctermfg=8 " 修改结构体成员
+
 
 
 " molokai
 syntax enable
 set background=dark
 colorscheme molokai
+"colorscheme bandit
 
 filetype on           " 开启文件类型检测
 filetype plugin on    " 设置加载对应文件类型的插件
@@ -132,6 +143,8 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin'
 
+Plug 'https://github.com/kendling/taghighlight'
+
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
@@ -140,6 +153,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
+
 
 " Initialize plugin system
 call plug#end()
